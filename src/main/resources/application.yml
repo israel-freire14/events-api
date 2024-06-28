@@ -1,0 +1,12 @@
+spring:
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+
+    datasource:
+        url: jdbc:h2:mem:eventostec
+        username: israelfreire
+        password: password
+
+    h2:
+        console: true
+        pth: "/h2"
