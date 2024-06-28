@@ -24,11 +24,11 @@ class Address (
 
     @Id
     @GeneratedValue
-    private val id: UUID,
+    private var id: UUID,
 
-    private val city: String,
+    private var city: String,
 
-    private val uf: String,
+    private var uf: String,
 
     @ManyToOne
     @JoinColumn(name="event_id")

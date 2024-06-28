@@ -26,15 +26,15 @@ data class Event(
     private val id: UUID,
 
 
-    private val title: String,
+    private var title: String,
 
-    private val description: String,
+    private var description: String,
 
-    private val imgUrl: String,
+    private var imgUrl: String,
 
-    private val eventUrl: String,
+    private var eventUrl: String,
 
-    private val remote: Boolean,
+    private var remote: Boolean,
 
-    private val date: Date
+    private var date: Date
 )
