@@ -9,4 +9,8 @@ spring:
 
     h2:
         console: true
-        pth: "/h2"
+        pth: "/h2-console"
+
+    ##flyway:
+       ## locations: src/main/resources/db/migration/
+       ## enabled: true

@@ -23,8 +23,7 @@ data class Event(
 
     @Id
     @GeneratedValue
-    private val id: UUID,
-
+    private var id: UUID,
 
     private var title: String,
 
