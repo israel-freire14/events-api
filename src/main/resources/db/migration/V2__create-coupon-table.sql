@@ -1,5 +1,5 @@
 CREATE TABLE coupon(
-    id UUID PRIMARY KEY,
+    id UUID DEFAULT random_uuid() PRIMARY KEY,
     code  VARCHAR(100) NOT NULL,
     discount INTEGER NOT NULL,
     valid TIMESTAMP NOT NULL,

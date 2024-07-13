@@ -1,5 +1,5 @@
 CREATE TABLE address(
-    id UUID PRIMARY KEY,
+    id UUID DEFAULT random_uuid() PRIMARY KEY,
     city VARCHAR(100) NOT NULL,
     uf VARCHAR(100) NOT NULL,
     event_id UUID,

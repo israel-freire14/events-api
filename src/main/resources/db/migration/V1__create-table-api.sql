@@ -1,7 +1,6 @@
 
-
 CREATE TABLE event(
-    id UUID PRIMARY KEY,
+    id UUID DEFAULT random_uuid() PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     description VARCHAR(250) NOT NULL,
     img_url VARCHAR(100) NOT NULL,
