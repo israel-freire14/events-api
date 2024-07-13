@@ -6,12 +6,7 @@ import lombok.Getter
 import lombok.NoArgsConstructor
 import lombok.Setter
 import java.util.UUID
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
-import javax.persistence.JoinColumn
-import javax.persistence.ManyToOne
-import javax.persistence.Table
+import javax.persistence.*
 
 
 @Entity
@@ -23,7 +18,8 @@ import javax.persistence.Table
 class Address (
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", updatable = false, unique = true, nullable = false)
     private var id: UUID,
 
     private var city: String,

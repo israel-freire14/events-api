@@ -7,12 +7,7 @@ import lombok.NoArgsConstructor
 import lombok.Setter
 import java.util.Date
 import java.util.UUID
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
-import javax.persistence.JoinColumn
-import javax.persistence.ManyToOne
-import javax.persistence.Table
+import javax.persistence.*
 
 
 @Entity
@@ -24,7 +19,8 @@ import javax.persistence.Table
 data class Coupon(
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", updatable = false, unique = true, nullable = false)
     private val id: UUID,
     private val discount: Int,
     private val valid: Date,

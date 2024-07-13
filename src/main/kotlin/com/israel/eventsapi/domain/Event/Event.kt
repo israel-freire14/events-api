@@ -4,13 +4,10 @@ import lombok.AllArgsConstructor
 import lombok.Getter
 import lombok.NoArgsConstructor
 import lombok.Setter
-import javax.persistence.Table
+import org.hibernate.annotations.GenericGenerator
 import java.util.Date
 import java.util.UUID
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
-
+import javax.persistence.*
 
 
 @Table(name = "event")
@@ -19,11 +16,12 @@ import javax.persistence.Id
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-data class Event(
+ class Event(
 
     @Id
-    @GeneratedValue
-    private var id: UUID,
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    private val id: UUID,
 
     private var title: String,
 
